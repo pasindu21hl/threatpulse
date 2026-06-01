@@ -46,7 +46,7 @@ echo "[*] Configuring Nginx Web Server..."
 NGINX_CONF="/etc/nginx/sites-available/threatpulse"
 cat << 'EOF' > $NGINX_CONF
 server {
-    listen 80;
+    listen 8080;
     server_name _;
 
     root /opt/threatpulse/dist;
@@ -110,5 +110,5 @@ systemctl start threatpulse-backend
 
 echo "=========================================="
 echo "   Deployment Complete!                  "
-echo "   Server URL: http://<Your-Azure-IP>/   "
+echo "   Server URL: http://<Your-Azure-IP>:8080/   "
 echo "=========================================="
