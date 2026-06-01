@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Clean Custom Scrollbars for dark theme SIEM look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #434343;
+}
+
+/* Print Overrides for professional PDF Incident Reports */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .printable-report {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 20px !important;
+  }
+
+  /* Hide navigation controls, headers, buttons and sidebars during print */
+  .ant-layout-sider,
+  .ant-layout-header,
+  .ant-btn,
+  .ant-card-extra,
+  .ant-tabs-nav,
+  .ant-divider-vertical {
+    display: none !important;
+  }
+
+  .ant-layout,
+  .ant-layout-content,
+  .ant-card {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    border: none !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+
+  h2, h3, p, span, pre {
+    color: #000000 !important;
+  }
+}
