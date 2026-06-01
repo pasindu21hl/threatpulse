@@ -22,9 +22,11 @@ fi
 
 # 3. Setup folders
 PROJECT_DIR="/opt/threatpulse"
-echo "[*] Creating project directory at $PROJECT_DIR..."
-mkdir -p $PROJECT_DIR
-cp -r . $PROJECT_DIR
+if [ "$(pwd)" != "$PROJECT_DIR" ]; then
+    echo "[*] Copying project files to $PROJECT_DIR..."
+    mkdir -p $PROJECT_DIR
+    cp -r . $PROJECT_DIR
+fi
 cd $PROJECT_DIR
 
 # 4. Configure Backend environment
